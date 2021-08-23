@@ -1,0 +1,44 @@
+
+-----------------------------------------------------------------------------------
+Great! Sounds like it'll work. How well does it work if we add some code in here?
+class Solution
+{
+    static void Main(string[] args)
+    {
+        int N = int.Parse(Console.ReadLine());
+        int[] array = new int[N];
+        for (int i = 0; i < N; i++)
+        {
+            int pi = int.Parse(Console.ReadLine());
+            array[i] = pi;
+        }
+        Array.Sort(array);
+        int final = 1000;
+        int[] test = new int[N-1];
+        for (int i = 0; i < array.Length; i++){
+            if (i == array.Length-1){
+                break;
+            }
+            //Everything above this works as intended.
+            else {
+                     
+                    int test2 = Math.Abs(array[i] - array[i+1]);
+                    test[i] = test2;
+                    /*if (test2 == 0){
+                        break;
+                    }
+                    if (final > test2){
+                        final = test2;
+                    }*/
+            }
+        }
+        Console.WriteLine(test.Min());
+    }
+}
+
+Fricking perfect!
+--------------------------------------------------------------------------
+Hey! This is Cody. I think that we might be able to get more through here. 
+
+
+
