@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Game for Programming Fundamentals/1.0.0": {
+        "runtime": {
+          "Game for Programming Fundamentals.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Game for Programming Fundamentals/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

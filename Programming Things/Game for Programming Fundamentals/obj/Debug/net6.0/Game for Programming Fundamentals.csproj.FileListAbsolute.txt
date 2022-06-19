@@ -1,0 +1,15 @@
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\bin\Debug\net6.0\Game for Programming Fundamentals.exe
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\bin\Debug\net6.0\Game for Programming Fundamentals.deps.json
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\bin\Debug\net6.0\Game for Programming Fundamentals.runtimeconfig.json
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\bin\Debug\net6.0\Game for Programming Fundamentals.dll
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\bin\Debug\net6.0\Game for Programming Fundamentals.pdb
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.csproj.AssemblyReference.cache
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.AssemblyInfoInputs.cache
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.AssemblyInfo.cs
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.csproj.CoreCompileInputs.cache
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.dll
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\refint\Game for Programming Fundamentals.dll
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.pdb
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\Game for Programming Fundamentals.genruntimeconfig.cache
+C:\Users\codyh\my-code-dir\Cody-Howell\Programming Things\Game for Programming Fundamentals\obj\Debug\net6.0\ref\Game for Programming Fundamentals.dll
