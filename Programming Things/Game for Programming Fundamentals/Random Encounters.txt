@@ -14,3 +14,4 @@
 #                      \_______________/       #
 #                                              #
 ################################################
+You can attack, defend, or heal. Which would you like to do?
