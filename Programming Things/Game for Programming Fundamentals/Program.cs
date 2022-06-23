@@ -66,6 +66,15 @@ do {
                 break;
             //You don't get an escape key. :/
         }
+        if (screen[Console.CursorTop][Console.CursorLeft] == '!'){ 
+            Console.Clear();
+            Console.WriteLine("You died! Don't touch those => !");
+            Console.WriteLine("Press a key to respawn.");
+            Console.ReadKey(true);
+            map = 0;
+            inBoss = false;
+            break;
+        }
         if (screen[Console.CursorTop][Console.CursorLeft] == '$' && inBoss == true){
             winning = true;
             stopwatch.Stop();
