@@ -46,7 +46,7 @@ do {
     
     if (checkPointReached == false){Console.CursorTop = 3; Console.CursorLeft = 4;}
     else if (map == 5){Console.CursorTop = 16; Console.CursorLeft = 24;}
-    else if (map > 0 && map < 5){Console.CursorTop = 2; Console.CursorLeft = 2;}
+    else if (map > 0 && map < 5){Console.CursorTop = 1; Console.CursorLeft = 1;}
     else {Console.CursorTop = 8; Console.CursorLeft = 52;} // Placement for checkpoints
 
     while (map != 6 && winning == false){
@@ -84,7 +84,7 @@ do {
         if (screen[Console.CursorTop][Console.CursorLeft] == '*'){ 
             inMaze = true;
             checkPointReached = true;
-            map = /*rand.Next(1,4)*/ 3; //the easier maze.
+            map = rand.Next(1,4); 
             break;
         }
     }
@@ -98,5 +98,5 @@ do {
 } while (winning == false);
 
 Console.Clear();
-double minutes = stopwatch.ElapsedMilliseconds / 60000.0;
-Console.WriteLine($"Congrats! You won. It only took you {Math.Truncate(minutes)} minutes. :P");
+double seconds = stopwatch.ElapsedMilliseconds / 1000.0;
+Console.WriteLine($"Congrats! You won. It only took you {Math.Truncate(seconds)} seconds. :P");
