@@ -171,6 +171,7 @@ do {
             else if (answer == "heal"){
                 health += rand.Next(15,25); //Needed a major buff.
                 attack = 0;
+                if (health > 100){health = 100;}
             }
 
             //Console.WriteLine(health + " " + enemyAttack + " " + enemyHealth + " " + attack + "        "); Debug line.
