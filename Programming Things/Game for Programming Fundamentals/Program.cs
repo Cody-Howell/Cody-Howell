@@ -210,4 +210,4 @@ do {
 
 Console.Clear();
 double seconds = stopwatch.ElapsedMilliseconds / 1000.0;
-Console.WriteLine($"Congrats! You won. It only took you {Math.Truncate(seconds)} seconds. :P");
+Console.WriteLine($"Congrats! You won. It only took you {seconds} seconds. :P"); //Made it so you can see milliseconds.
