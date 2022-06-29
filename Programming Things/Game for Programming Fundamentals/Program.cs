@@ -26,10 +26,14 @@ bool inMaze = false;
 bool inBoss = false;
 bool inBattle = false;
 bool fromBattle = false;
+bool dead = false;
 bool winning = false;
 int[] standing = new int[2];
+int[] boss = new int[2] {0,0};
 int health = 100;
 int BATTLE = 0;
+int enemyCount = 0;
+int bossCount = 0;
 Stopwatch stopwatch = new Stopwatch();
 
 
@@ -50,10 +54,66 @@ do {
     if (fromBattle == true){Console.CursorTop = standing[0]; Console.CursorLeft = standing[1]; fromBattle = false;}
     else if (checkPointReached == false){Console.CursorTop = 3; Console.CursorLeft = 4;}
     else if (map == 5){Console.CursorTop = 16; Console.CursorLeft = 24;}
+    else if (map > 0 && map < 5 && inBoss == true){standing[0] = 3; standing[1] = 1;} //One for the new boss rooms.
     else if (map > 0 && map < 5 && inMaze == false){Console.CursorTop = 1; Console.CursorLeft = 1; inMaze = true;}
     else {Console.CursorTop = 8; Console.CursorLeft = 52;} // Placement for checkpoints
 
-    while (true){
+    //Putting boss stuff here. Copying movement to avoid that mess, hopefully doesn't break too much. Put above the previous stuff to make sure the map was drawn first, and to avoid softlocks.
+    while (inBoss == true && map != 5 && dead == false){
+        Console.CursorTop = standing[0]; Console.CursorLeft = standing[1];
+        var dir = Console.ReadKey(true).Key; 
+        switch (dir){ 
+            case ConsoleKey.UpArrow:
+                TryMove(Console.CursorTop-1, Console.CursorLeft, screen);
+                break;
+            case ConsoleKey.DownArrow:
+                TryMove(Console.CursorTop+1, Console.CursorLeft, screen);
+                break;
+            case ConsoleKey.LeftArrow:
+                TryMove(Console.CursorTop, Console.CursorLeft-1, screen);
+                break;
+            case ConsoleKey.RightArrow:
+                TryMove(Console.CursorTop, Console.CursorLeft+1, screen);
+                break;
+        }
+        standing[0] = Console.CursorTop; standing[1] = Console.CursorLeft;
+        //Boss movements. Pretty much just chasing you in the shortest way. He doesn't care about walls and will just break them. He does not stop. You get like 4 spaces to work with.
+        Console.CursorTop = boss[0]; Console.CursorLeft = boss[1]; Console.Write(" "); //Empty his spot.
+        int upDown = Math.Abs(standing[0] - boss[0]);
+        int leftRight = Math.Abs(standing[1] - boss[1]); //Which distance is longer?
+        if (upDown >= leftRight){
+            if (boss[0] > standing[0]) {boss[0]--;}
+            else {boss[0]++;}
+        }
+        else {
+            if (boss[1] > standing[1]) {boss[1]--;}
+            else {boss[1]++;}
+        }
+        if (boss[0] == standing[0] && boss[1] == standing[1]) {//If you're in the same spot, you're dead.
+            dead = true; 
+            Console.Clear();
+            Console.WriteLine("He got you! Learn his tricks to avoid death.");
+            Console.WriteLine("Press a key to respawn.");
+            Console.ReadKey(true);
+            health = 100;
+            map = 0;
+            inBoss = false;
+            break;
+            
+        } 
+        else { //Actually moving him. 
+            Console.CursorTop = boss[0]; Console.CursorLeft = boss[1]; Console.Write("!");
+        }
+
+        if (screen[Console.CursorTop][Console.CursorLeft] == '*' && inBoss == true){
+            winning = true;
+            stopwatch.Stop();
+            break;
+        }
+    }
+    
+    while (true && winning == false && dead == false){ //added winning == false as a safeguard, now that you can win in lines above this. Same for death.
+        if (inBoss == true && map != 5){break;} 
         var dir = Console.ReadKey(true).Key; 
         switch (dir){ //Second stolen thing, going to clean it with a Switch function.
             case ConsoleKey.UpArrow:
@@ -91,10 +151,20 @@ do {
             inMaze = false;
             break;
         }
-        if (screen[Console.CursorTop][Console.CursorLeft] == '$' && checkPointReached == true){
-            map = 5;
+        if (screen[Console.CursorTop][Console.CursorLeft] == '$' && checkPointReached == true){ //getting into the boss rooms.
             inBoss = true;
+            bossCount++;
+            if (bossCount >= 4){map = 5; break;} //If you've been through 3 mazes and haven't beaten it, you get to go to the room I spent all my time making.
+            else {
+                int temp = rand.Next(1,4);
+                switch (temp){ 
+                    case 1: map = 1; break;
+                    case 2: map = 2; break;
+                    case 3: map = 3; break;
+                    case 4: map = 4; break;
+                }
             break;
+            }
         }
         if (screen[Console.CursorTop][Console.CursorLeft] == '*'){ 
             checkPointReached = true;
@@ -107,8 +177,10 @@ do {
             break;
         }
     }
+
     //Start of the random encounter stuff.
     if (BATTLE == 6 && map == 0){
+        enemyCount++;
         standing[0] = Console.CursorTop;
         standing[1] = Console.CursorLeft; //Saving a checkpoint for respawning at the same spot.
         screen = File.ReadAllLines(mapPath[6]);
@@ -207,6 +279,8 @@ do {
             continue;
         }
     }
+    boss[0] = 0; boss[1] = 0; //Reset the boss position.
+    dead = false; //I think I can just chuck this down here as a safety measure.
 } while (winning == false);
 
 Console.Clear();
