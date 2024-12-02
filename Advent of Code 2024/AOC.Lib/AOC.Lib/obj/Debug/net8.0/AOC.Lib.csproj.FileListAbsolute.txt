@@ -1,0 +1,11 @@
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.AssemblyInfoInputs.cache
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.AssemblyInfo.cs
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.csproj.CoreCompileInputs.cache
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\bin\Debug\net8.0\AOC.Lib.deps.json
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\bin\Debug\net8.0\AOC.Lib.dll
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\bin\Debug\net8.0\AOC.Lib.pdb
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.dll
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\refint\AOC.Lib.dll
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\AOC.Lib.pdb
+C:\Users\Cody\source\repos\AOC.Lib\AOC.Lib\obj\Debug\net8.0\ref\AOC.Lib.dll
