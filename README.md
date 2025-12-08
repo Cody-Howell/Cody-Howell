@@ -1,7 +1,6 @@
 - 👋 Hi, I’m @Cody-Howell
 - 👀 I’m interested in making a game/solving puzzles.
 - 🌱 I’m currently taking a degree at Snow College in Software Engineering.
-- 💞️ I’m looking to collaborate on ideal methods of using arrays while solving puzzles. /s
 - 📫 How to reach me: business@codyhowell.dev.
 
 <!---
