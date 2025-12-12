@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AOC.Lib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+226b160a383e2d52508a8abbe9c861897ed01732")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50b8a5a3f76f710d143090441e95bf617e9ee0fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("AOC.Lib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AOC.Lib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
