@@ -1,5 +1,7 @@
 This is where I will organize all of my current (non-deprecated) packages, as well as links to all of their wiki pages where you can get to everywhere else (their GitHub, NuGet, and read their documentation). 
 
+Items that have links are for the repository that holds it and everything beneath it. 
+
 - HowlDev.Web
     - .Authentication
         - .AccountAuth
@@ -37,6 +39,12 @@ This is where I will organize all of my current (non-deprecated) packages, as we
         - .ConfigFile
             - Is my current ConfigFileLibrary. Depends on the Parsers in the part above. 
 - HowlDev.AI
-    - Empty
+    - .Core
+        - Contains all the interfaces for classes and algorithms within (and without) this namespace. (Without means interfaces for external objects to implement for some algorithmic things)
+    - .Structures
+        - Contains (for now, only) the Neural Network class. This is a naive implementation with two-dimensional neurons and weights arranged in layers. 
+    - .Training
+        - .Genetic
+            - Holds a class (and calls the interface from Core) to run a genetic algorithm. Holds a few parameters and option classes for defining the actions of the algorithm.  
 - HowlDev.Core
     - Empty
