@@ -3,7 +3,7 @@ This is where I will organize all of my current (non-deprecated) packages, as we
 Items that have links are for the repository that holds it and everything beneath it. 
 
 - HowlDev.Web
-    - .Authentication
+    - [.Authentication](https://github.com/Cody-Howell/HowlDev.Web.Authentication)
         - .AccountAuth
             - Is my current AccountAuthenticator library. I believe it will just be my AuthService stuff.
         - .Middleware
@@ -16,7 +16,12 @@ Items that have links are for the repository that holds it and everything beneat
                 Given a few parameters (maybe a configuration object, maybe some static fields), create a loop that runs until its done or the configuration stops it. 
         - Both of the above should be available as Responses and as Streams. I'd like to experiment with both. 
         - I'd want my own Function definitions so that I can more easily integrate with it; for example, I don't need to read the AI output and check which function to run in my loop, I'll define an interface and make _it_ do that. 
-- HowlDev.Data
+    - [.Helpers](https://github.com/Cody-Howell/HowlDev.Web.Helpers)
+        - .WebSockets
+            - Has a WebSocketService to simplify registration and sending of messages over WebSockets.
+        - .DbConnector
+            - My little helper class that I use basically everywhere. Uses Dapper to correctly pool threads and properly multithread calls. 
+- [HowlDev.Data](https://github.com/Cody-Howell/HowlDev.Data)
     - .Structures
         - Includes a Graph and Circuit class
     - .Algorithms
@@ -26,19 +31,19 @@ Items that have links are for the repository that holds it and everything beneat
         - .Sampling
             - Inlcudes things like a deck of cards, coin, n dice roll, and hopefully an arbitrary one that you can pack with data types that (maybe) fit a specific interface, then you can perform With and Without Replacement on them. Pretty easy. 
 - HowlDev.Simulation
-    - .Physics
+    - [.Physics](https://github.com/Cody-Howell/HowlDev.Simulation.Physics)
         - .Primitive2D
             - Contains all the classes I've already built for Rotations, Points, Lines, Equations, etc. 
         - .Grid2D
             - Depends on the Primitive library above.
             - Enables you to generate a grid of either squares or hexagons (or triangles..) with a number of helper methods. From each node, you can specify whether or not you can reach all of your neighbor nodes, and I should implement A* search (using the Algorithms library) to do pathfinding on both of those libraries.  
 - HowlDev.IO
-    - .Text
+    - [.Text](https://github.com/Cody-Howell/HowlDev.IO.Text)
         - .Parsers
             - Includes a few different parsings of different files. Includes the Enum and value type I already have implemented for the ConfigFile section.
         - .ConfigFile
             - Is my current ConfigFileLibrary. Depends on the Parsers in the part above. 
-- HowlDev.AI
+- [HowlDev.AI](https://github.com/Cody-Howell/HowlDev.AI)
     - .Core
         - Contains all the interfaces for classes and algorithms within (and without) this namespace. (Without means interfaces for external objects to implement for some algorithmic things)
     - .Structures
