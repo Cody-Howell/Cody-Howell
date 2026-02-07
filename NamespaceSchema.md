@@ -21,6 +21,7 @@ Items that have links are for the repository that holds it and everything beneat
             - Has a WebSocketService to simplify registration and sending of messages over WebSockets.
         - .DbConnector
             - My little helper class that I use basically everywhere. Uses Dapper to correctly pool threads and properly multithread calls. 
+            
 - [HowlDev.Data](https://github.com/Cody-Howell/HowlDev.Data)
     - .Structures
         - Includes a Graph and Circuit class
@@ -30,6 +31,7 @@ Items that have links are for the repository that holds it and everything beneat
     - .Probability
         - .Sampling
             - Inlcudes things like a deck of cards, coin, n dice roll, and hopefully an arbitrary one that you can pack with data types that (maybe) fit a specific interface, then you can perform With and Without Replacement on them. Pretty easy. 
+
 - HowlDev.Simulation
     - [.Physics](https://github.com/Cody-Howell/HowlDev.Simulation.Physics)
         - .Primitive2D
@@ -37,12 +39,19 @@ Items that have links are for the repository that holds it and everything beneat
         - .Grid2D
             - Depends on the Primitive library above.
             - Enables you to generate a grid of either squares or hexagons (or triangles..) with a number of helper methods. From each node, you can specify whether or not you can reach all of your neighbor nodes, and I should implement A* search (using the Algorithms library) to do pathfinding on both of those libraries.  
+
 - HowlDev.IO
     - [.Text](https://github.com/Cody-Howell/HowlDev.IO.Text)
         - .Parsers
             - Includes a few different parsings of different files. Includes the Enum and value type I already have implemented for the ConfigFile section.
         - .ConfigFile
             - Is my current ConfigFileLibrary. Depends on the Parsers in the part above. 
+    - [.Binary](https://github.com/Cody-Howell/HowlDev.IO.Binary)
+        - .Encoding
+            - Takes in arbitrary objects, and through an algorithm, determines a semi-optimal binary encoding that sends the minimal amount of data. 
+        - .Decoding
+            - Taking in a bit stream and a class definition, creates the object requested. 
+
 - [HowlDev.AI](https://github.com/Cody-Howell/HowlDev.AI)
     - .Core
         - Contains all the interfaces for classes and algorithms within (and without) this namespace. (Without means interfaces for external objects to implement for some algorithmic things)
@@ -51,5 +60,15 @@ Items that have links are for the repository that holds it and everything beneat
     - .Training
         - .Genetic
             - Holds a class (and calls the interface from Core) to run a genetic algorithm. Holds a few parameters and option classes for defining the actions of the algorithm.  
+
+- [HowlDev.Quality](https://github.com/Cody-Howell/HowlDev.Quality)
+    - .TestGeneration
+        - Takes in class types and configurations and generates test files that do some action. Some are full enumerations; given these three different enums, make tests for all different combinations. Some capture the current value of the system; given method and boundaries, make tests that test what the system currently returns. Some can help you fill out test coverage by checking branching paths. 
+    - .Performance
+        - Helps generate functions/low cast parameter definitions for performance analysis. 
+    - .Mutations
+        - Implements some different types of mutation tests on your classes, and determines where your tests don't catch a mutation. 
+
+
 - HowlDev.Core
     - Empty
