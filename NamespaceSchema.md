@@ -8,7 +8,7 @@ Items that have links are for the repository that holds it and everything beneat
             - Is my current AccountAuthenticator library. I believe it will just be my AuthService stuff.
         - .Middleware
             - Is my current IdentityMiddleware function. I think I should export just the functions it needs as an interface, and anything that implements that interface (such as my AuthService) will enable it to work. This would also let me expand into more types that do the same thing, such as my EmailAuthenticator (RIP, we never knew ye).
-    - .OpenAI
+    - .OpenAI (Not yet started)
         - Includes all of the services I need to effectively talk with a client that implements the OpenAI spec. I want functions/services that do the following:
             - Send A Message
                 - Takes in a list of messages, functions, and an optional System prompt and returns the AI response from it. One and done, no loops. 
@@ -36,7 +36,7 @@ Items that have links are for the repository that holds it and everything beneat
     - [.Physics](https://github.com/Cody-Howell/HowlDev.Simulation.Physics)
         - .Primitive2D
             - Contains all the classes I've already built for Rotations, Points, Lines, Equations, etc. 
-        - .Grid2D
+        - .Grid2D (In progress)
             - Depends on the Primitive library above.
             - Enables you to generate a grid of either squares or hexagons (or triangles..) with a number of helper methods. From each node, you can specify whether or not you can reach all of your neighbor nodes, and I should implement A* search (using the Algorithms library) to do pathfinding on both of those libraries.  
 
@@ -46,7 +46,7 @@ Items that have links are for the repository that holds it and everything beneat
             - Includes a few different parsings of different files. Includes the Enum and value type I already have implemented for the ConfigFile section.
         - .ConfigFile
             - Is my current ConfigFileLibrary. Depends on the Parsers in the part above. 
-    - [.Binary](https://github.com/Cody-Howell/HowlDev.IO.Binary)
+    - [.Binary](https://github.com/Cody-Howell/HowlDev.IO.Binary) (In progress)
         - .Encoding
             - Takes in arbitrary objects, and through an algorithm, determines a semi-optimal binary encoding that sends the minimal amount of data. 
         - .Decoding
@@ -61,13 +61,22 @@ Items that have links are for the repository that holds it and everything beneat
         - .Genetic
             - Holds a class (and calls the interface from Core) to run a genetic algorithm. Holds a few parameters and option classes for defining the actions of the algorithm.  
 
-- [HowlDev.Quality](https://github.com/Cody-Howell/HowlDev.Quality)
+- [HowlDev.Quality](https://github.com/Cody-Howell/HowlDev.Quality) (In progress)
     - .TestGeneration
         - Takes in class types and configurations and generates test files that do some action. Some are full enumerations; given these three different enums, make tests for all different combinations. Some capture the current value of the system; given method and boundaries, make tests that test what the system currently returns. Some can help you fill out test coverage by checking branching paths. 
     - .Performance
         - Helps generate functions/low cast parameter definitions for performance analysis. 
     - .Mutations
         - Implements some different types of mutation tests on your classes, and determines where your tests don't catch a mutation. 
+
+- [HowlDev.Cli](https://github.com/Cody-Howell/HowlDev.Cli)
+    - .TextDTO
+        - CLI tool that takes in a file or folder of JSON files that export to C#, TS, and Zod types in other folder (overwriting if they currently exist). This is designed to make DTO objects easier to maintain in a full stack project. 
+    - FullStackBuilder (In progress)
+        - CLI tool that uses the Vite builder and Dotnet solution builder to bootstrap small full-stack apps. 
+        - Has options to install default packages for JS (such as Zod, React Router, and perhaps some custom ones) and for C# (primarily my own packages that I use). 
+            - For packages that have setup (or for other setup options like Vite building into an external folder), have parameters to set them up by default. This applies mainly to my personal libraries that have a small amount of setup. 
+        - Also can generate Docker Composes/Dockerfiles. 
 
 
 - HowlDev.Core
