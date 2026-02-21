@@ -78,6 +78,14 @@ Items that have links are for the repository that holds it and everything beneat
             - For packages that have setup (or for other setup options like Vite building into an external folder), have parameters to set them up by default. This applies mainly to my personal libraries that have a small amount of setup. 
         - Also can generate Docker Composes/Dockerfiles. 
 
+- [HowlDev.CodeGen](https://github.com/Cody-Howell/HowlDev.CodeGen)
+    - .Core
+        - Holds any core object definitions used inside these objects to build the required files. 
+    - .CSharp
+        - Holds all the methods to generate C# code based off of configuration files. 
+    - .TypeScript
+        - Holds all the methods to generate TS code based off of configuration files. 
+
 
 - HowlDev.Core
     - Empty
